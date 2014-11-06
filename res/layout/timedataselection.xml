@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/chart"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/dataselection"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/xaxiz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tx_xaxiz" />
+
+        <com.facebook.biodatashare.display.MultiSelectionSpinner
+            android:id="@+id/mySpinner1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/xaxiz"
+            android:prompt="@string/data_picker" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/datepickerlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dataselection"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_dateselection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnchartdatechager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+			android:layout_toRightOf="@id/tv_dateselection"
+            android:text="change date" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/timepickerlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/datepickerlayout"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_timeselection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btncharttimechager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tv_timeselection"
+            android:layout_alignParentRight="true"
+            android:text="change time" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/timeselection"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/timepickerlayout"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/yaxiz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tx_yaxiz" />
+
+        <Spinner
+            android:id="@+id/mySpinner2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/yaxiz"
+            android:prompt="@string/data_picker" />
+
+        <Button
+            android:id="@+id/btnchartcomfirm"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mySpinner2"
+            android:text="confirm" />
+    </RelativeLayout>
+
+
+</RelativeLayout>
